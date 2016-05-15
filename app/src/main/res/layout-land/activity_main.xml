@@ -12,10 +12,10 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_weight="2"
             android:orientation="horizontal">
 
             <TextView
@@ -99,43 +99,50 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:padding="16dp"
-            android:id="@+id/picture_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cat"
-            android:onClick="nextSpellIt"
-            android:background="@android:color/transparent"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="8"
+            android:orientation="horizontal">
 
-            <Button
-                style="@style/letterButton"
-                android:id="@+id/button_one"
-                android:onClick="buttonPush"
-                android:text="A" />
+            <ImageButton
+                android:id="@+id/picture_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:onClick="nextSpellIt"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cat" />
 
-            <Button
-                android:id="@+id/button_two"
-                style="@style/letterButton"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                android:onClick="buttonPush"
-                android:text="A" />
+                <Button
+                    android:id="@+id/button_one"
+                    style="@style/letterButtonLandscape"
+                    android:onClick="buttonPush"
+                    android:text="A" />
 
-            <Button
-                android:id="@+id/button_three"
-                style="@style/letterButton"
-                android:layout_marginRight="16dp"
-                android:onClick="buttonPush"
-                android:text="A" />
+                <Button
+                    android:id="@+id/button_two"
+                    style="@style/letterButtonLandscape"
+                    android:onClick="buttonPush"
+                    android:text="A" />
 
+                <Button
+                    android:id="@+id/button_three"
+                    style="@style/letterButtonLandscape"
+                    android:onClick="buttonPush"
+                    android:text="A" />
+
+            </LinearLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 
@@ -144,14 +151,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="96sp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/image_name"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_orange_light"
-        android:shadowRadius="5"
-        android:shadowDy="10"
-        android:shadowDx="10"
-        android:shadowColor="@android:color/black"
-        android:text="@string/image_name"
-        android:visibility="gone"/>
+        android:textSize="96sp"
+        android:visibility="gone" />
 
 </RelativeLayout>
